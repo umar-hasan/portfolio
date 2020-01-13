@@ -1,5 +1,9 @@
 $(document).ready(function(){
+
     $("#navbar-container").hide();
+    $("#portfolio-container").hide();
+    $("#about-container").hide();
+
     $(".card").hover(function(){
         $(this).addClass("shadow-lg").css('cursor', 'pointer');
     }, function(){
@@ -16,8 +20,9 @@ $(document).ready(function(){
         $("#about-card").addClass("fadeOutDown");
         $("#resume-card").addClass("fadeOutRight");
         
-        $("#home-container").delay(500).hide(function(){
+        $("#home-container").delay(1000).hide(function(){
             $("#navbar-container").fadeIn();
+            $("#portfolio-container").fadeIn();
         });
     });
 
@@ -31,8 +36,10 @@ $(document).ready(function(){
         $("#portfolio-card").addClass("fadeOutLeft");
         $("#resume-card").addClass("fadeOutRight");
         
-        $("#home-container").delay(500).hide(function(){
+        
+        $("#home-container").delay(1000).hide(function(){
             $("#navbar-container").fadeIn();
+            $("#about-container").fadeIn();
         });
     });
 
@@ -54,23 +61,43 @@ $(document).ready(function(){
             $("#navbar-container").fadeOut();
             $("#navbar-container").delay(500).hide();
             $("#home-container").delay(500).show();
+
+            if ($("#portfolio-container").css('display') != 'none') {
+                $("#portfolio-container").fadeOut();
+                $("#portfolio-container").delay(500).hide();
+            }
+
+            if ($("#about-container").css('display') != 'none') {
+                $("#about-container").fadeOut();
+                $("#about-container").delay(500).hide();
+            }
         });
 
         $(".about-link").click(function(){
+            $("#portfolio-container").fadeOut();
             $(".about-link").fadeOut();
             $(".about-link").delay(500).hide(function(){
                 $("#navbar-container .portfolio-link").fadeIn();
+                $("#portfolio-container").delay(500).hide();
+                $("#about-container").fadeIn();
             });
+            
         });
 
         $(".portfolio-link").click(function(){
+            $("#about-container").fadeOut();
             $(".portfolio-link").fadeOut();
+            
+            $("#about-container").delay(500).hide();
             $(".portfolio-link").delay(500).hide(function(){
                 $("#navbar-container .about-link").fadeIn();
+                $("#portfolio-container").fadeIn();
             });
+            
         });
     }
 
 
+    
 
 });

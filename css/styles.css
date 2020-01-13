@@ -2,6 +2,26 @@ html, body {
     height: 100%;
 }
 
+@font-face {
+    font-family: "CenturyGothic";
+    src: url(../fonts/Coco-Gothic/Coco-Gothic-Light-trial.ttf);
+}
+
+@font-face {
+    font-family: "CenturyGothicBold";
+    src: url(../fonts/Coco-Gothic/Coco-Gothic-Bold-trial.ttf);
+}
+
+@font-face {
+    font-family: "CenturyGothicFat";
+    src: url(../fonts/Coco-Gothic/Coco-Gothic-Fat-trial.ttf);
+}
+
+@font-face {
+    font-family: "Digital";
+    src: url(../fonts/Aldrich-Regular.ttf);
+}
+
 a:hover {
     cursor: pointer;
 }
@@ -13,6 +33,12 @@ a:hover {
 
 #navbar-container a {
     color: black;
+}
+
+#contact-placeholder {
+    background-color: black;
+    width: 100%;
+    margin: 0;
 }
 
 .card-deck {
@@ -32,6 +58,92 @@ a:hover {
     margin-bottom: 1rem;
 }
 
+#portfolio-container h1, h2, p {
+    text-align: center;
+    font-family: "CenturyGothic";
+}
+
+
+#portfolio-container .col-3 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#projects-title {
+    font-family: "CenturyGothicBold";
+}
+
+
+.project-thumbnail {
+    width: 100%;
+    height: auto;
+}
+
+.thumbnail-overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0 0;
+    transform: translateY(-100%);
+    transition: 0.2s ease;
+}
+
+.project:hover .thumbnail-overlay{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.project:hover .more-info{
+    opacity: 1;
+}
+
+.links {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    padding-top: 25%;
+    z-index: 5;
+}
+
+.more-info {
+    opacity: 0;
+    color: white;
+    vertical-align: middle;
+}
+
+.links button {
+    background: none;
+    border: none;
+}
+
+#portfolio-container .modal-dialog {
+    max-width: 90% !important;
+}
+
+#contact-icons {
+    display: flex;
+}
+
+#linkedin-container {
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-style: groove;
+}
+
+#linkedin-url a {
+    color: black;
+    text-decoration: none;
+}
+
+#about-container h1, h2, p {
+    text-align: center;
+    font-family: "CenturyGothic";
+}
+
+.heading {
+    font-family: "CenturyGothicFat";
+}
+
+
 
 @media (min-width: 1200px){
     #home-container {
@@ -43,7 +155,110 @@ a:hover {
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+
+    #portfolio-container .container {
+        max-width: 90%;
+    }
+
+    
+
+    .contact-icon {
+        height: 50px;
+        width: 50px;
+        text-align: left;
+        border-radius: 100%;
+        border-width: 10px;
+        border-color: gray;
+    }
+
+    #linkedin-container {
+        background-color: aliceblue;
+        border-radius: 30px;
+        border-style: solid;
+        border-color: darkgray;
+        display: flex;
+    }
+
+    #linkedin-url {
+        margin-left: 0;
+        margin-right: 0;
+        vertical-align: middle;
+        display: inline-flex;
+        max-width: 0;
+        font-size: 15px;
+        transition: max-width 0.5s;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    #linkedin-container:hover #linkedin-url{
+        max-width: 280px;
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+    }
+
+    #email-container {
+        background-color: aliceblue;
+        border-radius: 30px;
+        border-style: solid;
+        border-color: darkgray;
+        display: flex;
+    }
+
+    #email-link {
+        margin-left: 0;
+        margin-right: 0;
+        vertical-align: middle;
+        display: inline-flex;
+        max-width: 0;
+        font-size: 15px;
+        transition: max-width 0.5s;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    #email-container:hover #email-link{
+        max-width: 245px;
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+    }
+
+    #intro {
+        font-family: "CenturyGothicBold";
+        font-weight: bold;
+    }
+
+    #digital {
+        font-family: "Digital";
+    }
+
+    .portfolio-icons {
+        margin-top: 100px;
+    }
+
+    .language-icon {
+        width: auto;
+        height: 300px;
+    }
+
+    .tool-icon {
+        width: auto;
+        height: 200px;
+    }
+
+    .heading {
+        margin-top: 200px;
+    }
+
+    .subheading {
+        font-size: 30px;
+    }
 }
+
+
+
+
+
 
 @media (min-width: 1900px){
     #home-container {
@@ -64,6 +279,17 @@ a:hover {
         width: 300px;
         height: 300px;
     }
+
+    #contact-placeholder {
+        height: 500px;
+    }
+
+    .contact-icon {
+        height: 100px;
+        width: 100px;
+    }
+
+    
 }
 
 @media (min-width: 3000px){
