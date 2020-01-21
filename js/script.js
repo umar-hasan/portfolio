@@ -45,7 +45,7 @@ $(document).ready(function(){
     $("#portfolio-card").click(function(){
         $("#navbar-container .portfolio-link").hide();
         $("#portfolio-mobile").hide();
-
+        $("#about-mobile").show();
         $("#navbar-container .about-link").show();
         $(this).removeClass("fadeInLeft");
         $("#about-card").removeClass("fadeInDown");
@@ -63,6 +63,8 @@ $(document).ready(function(){
 
     $("#about-card").click(function(){
         $("#navbar-container .about-link").hide();
+        $("#about-mobile").hide();
+        $("#portfolio-mobile").show();
         $("#navbar-container .portfolio-link").show();
         $("#portfolio-card").removeClass("fadeInLeft");
         $("#resume-card").removeClass("fadeInRight");
