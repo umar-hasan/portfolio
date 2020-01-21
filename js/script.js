@@ -207,6 +207,10 @@ $(document).ready(function(){
             });
             
         });
+
+        $("#resume-mobile").click(function(){
+            window.open("https://drive.google.com/open?id=1YCWJgloRuL7wrw86dW4bGjPrUMweFcPM");
+        });
     }
     
 
