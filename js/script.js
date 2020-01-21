@@ -1,8 +1,40 @@
 $(document).ready(function(){
 
     $("#navbar-container").hide();
+    $("#navbar-mobile-container").hide();
     $("#portfolio-container").hide();
     $("#about-container").hide();
+
+    $("#navbar-mobile-toggle").hide();
+    $("#navbar-mobile-items-wrapper").hide();
+
+    
+    $(window).resize(function(){
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            if ($("#navbar-mobile-container").css('diplay') != 'none') {
+                $("#navbar-container").show();
+                $("#navbar-mobile-container").hide();
+            }
+        }
+        else {
+            if ($("#navbar-container").css('diplay') != 'none') {
+                $("#navbar-mobile-container").show();
+                $("#navbar-container").hide();
+            }
+        }
+    });
+    
+
+    function initialBar() {
+        if (window.matchMedia("(min-width: 1200px)").matches) {
+            $("#navbar-container").fadeIn();
+        }
+        else {
+            $("#navbar-mobile-container").fadeIn();
+        }
+    }
+    
+    
 
     $(".card").hover(function(){
         $(this).addClass("shadow-lg").css('cursor', 'pointer');
@@ -21,7 +53,7 @@ $(document).ready(function(){
         $("#resume-card").addClass("fadeOutRight");
         
         $("#home-container").delay(1000).hide(function(){
-            $("#navbar-container").fadeIn();
+            initialBar();
             $("#portfolio-container").fadeIn();
         });
     });
@@ -38,7 +70,7 @@ $(document).ready(function(){
         
         
         $("#home-container").delay(1000).hide(function(){
-            $("#navbar-container").fadeIn();
+            initialBar();
             $("#about-container").fadeIn();
         });
     });
@@ -97,7 +129,23 @@ $(document).ready(function(){
         });
     }
 
+    if ($("#navbar-mobile-container").css('diplay') != 'none') {
+        $("#navbar-button").click(function(){
+            $("#navbar-mobile-toggle").show();
+            if ($("#portfolio-container").css('display') != 'none') {
+                $("#portfolio-mobile").hide();
+            }
+            if ($("#about-container").css('display') != 'none') {
+                $("#about-mobile").hide();
+            }
+            $("#navbar-mobile-items-wrapper").delay(500).show();
 
+        });
+
+        $("#close-icon-wrapper .close").click(function(){
+            $("#navbar-mobile-toggle").hide();
+        });
+    }
     
 
 });
