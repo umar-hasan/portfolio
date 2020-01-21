@@ -279,14 +279,14 @@ a:hover {
     vertical-align: middle;
     display: inline-flex;
     max-width: 0;
-    font-size: 20px;
+    font-size: 30px;
     transition: max-width 0.5s;
     overflow: hidden;
     white-space: nowrap;
 }
 
 #linkedin-container:hover #linkedin-url{
-    max-width: 280px;
+    max-width: 650px;
     margin-left: 0.5rem;
     margin-right: 1rem;
 }
@@ -305,14 +305,14 @@ a:hover {
     vertical-align: middle;
     display: inline-flex;
     max-width: 0;
-    font-size: 15px;
+    font-size: 30px;
     transition: max-width 0.5s;
     overflow: hidden;
     white-space: nowrap;
 }
 
 #email-container:hover #email-link{
-    max-width: 245px;
+    max-width: 550px;
     margin-left: 0.5rem;
     margin-right: 1rem;
 }
