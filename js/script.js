@@ -11,13 +11,13 @@ $(document).ready(function(){
     
     $(window).resize(function(){
         if (window.matchMedia("(min-width: 992px)").matches) {
-            if ($("#navbar-mobile-container").css('diplay') != 'none') {
+            if ($("#navbar-mobile-container").css('display') != 'none') {
                 $("#navbar-container").show();
                 $("#navbar-mobile-container").hide();
             }
         }
         else {
-            if ($("#navbar-container").css('diplay') != 'none') {
+            if ($("#navbar-container").css('display') != 'none') {
                 $("#navbar-mobile-container").show();
                 $("#navbar-container").hide();
             }
@@ -89,10 +89,9 @@ $(document).ready(function(){
     if($("#navbar-container").css('diplay') != 'none') {
         $(".home-link").click(function(){
             $("#portfolio-card").removeClass("fadeOutLeft");
-            $("#about-card").removeClass("fadeOutDown");
             $("#resume-card").removeClass("fadeOutRight");
             $("#portfolio-card").addClass("fadeInLeft");
-            $("#about-card").addClass("fadeInDown");
+            aboutTransitionIn();
             $("#resume-card").addClass("fadeInRight");
             $("#navbar-container").fadeOut();
             $("#navbar-container").delay(500).hide();

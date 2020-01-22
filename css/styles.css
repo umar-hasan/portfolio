@@ -121,6 +121,16 @@ a:hover {
     margin-bottom: 3rem;
 }
 
+.profile-image {
+    object-fit: cover;
+    height: 220px;
+    object-position: top;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: silver;
+    border-width: 2px;
+}
+
 #about-card {
     order: 1;
     margin-bottom: 3rem;
@@ -157,6 +167,9 @@ a:hover {
     margin-top: 3rem;
     margin-bottom: 3rem;
     padding: 0 !important;
+    border-style: solid;
+    border-color: silver;
+    border-width: 1px;
 }
 
 .project-thumbnail {
@@ -364,6 +377,10 @@ a:hover {
 
 
 @media (min-width: 768px) {
+    .profile-image {
+        margin-bottom: 2rem;
+    }
+
     #navbar-mobile-items-wrapper .card{
         display: flex;
         width: 300px;
@@ -422,6 +439,19 @@ a:hover {
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+
+    .profile-image {
+        object-fit: cover;
+        height: 220px;
+        object-position: top;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: silver;
+        border-width: 2px;
+        margin-bottom: 1.5rem;
+    }
+
+
 
     #portfolio-container .container {
         max-width: 90%;
@@ -554,6 +584,17 @@ a:hover {
     .tab-img {
         width: 300px;
         height: 300px;
+    }
+
+    .profile-image {
+        object-fit: cover;
+        height: 320px;
+        object-position: top;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: silver;
+        border-width: 2px;
+        margin-bottom: 2rem;
     }
 
     #contact-placeholder {
