@@ -204,7 +204,6 @@ a:hover {
 }
 
 .more-info {
-    outline: none;
     opacity: 0;
     color: white;
     vertical-align: middle;
@@ -214,9 +213,12 @@ a:hover {
 }
 
 .links button {
-    outline: none;
     background: none;
     border: none;
+}
+
+.links button:focus {
+    outline: none;
 }
 
 #portfolio-container .modal-dialog {
