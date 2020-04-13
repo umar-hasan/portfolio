@@ -217,7 +217,7 @@ a:hover {
     border: none;
 }
 
-button:focus {
+.more-info:focus {
     outline: none;
 }
 
