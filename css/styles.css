@@ -204,6 +204,7 @@ a:hover {
 }
 
 .more-info {
+    outline: none;
     opacity: 0;
     color: white;
     vertical-align: middle;
