@@ -24,7 +24,12 @@ html, body {
 
 @font-face {
     font-family: "SF Pro";
-    src: url(../fonts/SF-Pro.ttf);
+    src: url(../fonts/SF-Pro/SF-Pro.ttf);
+}
+
+@font-face {
+    font-family: "SF Pro Bold";
+    src: url(../fonts/SF-Pro/SF-Pro-Bold.ttf);
 }
 
 a:hover {
