@@ -22,6 +22,11 @@ html, body {
     src: url(../fonts/Aldrich-Regular.ttf);
 }
 
+@font-face {
+    font-family: "SF Pro";
+    src: url(../fonts/SF-Pro.ttf);
+}
+
 a:hover {
     cursor: pointer;
 }
@@ -238,6 +243,7 @@ a:hover {
 }
 
 .modal-body p {
+    font-family: "SF-Pro";
     font-size: 35px;
     text-align: justify;
     text-justify: inter-word;
