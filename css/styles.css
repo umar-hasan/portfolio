@@ -9,6 +9,7 @@ html, body {
 
 @font-face {
     font-family: "CenturyGothicBold";
+    font-weight: bold;
     src: url(../fonts/Coco-Gothic/Coco-Gothic-Bold-trial.ttf);
 }
 
@@ -29,6 +30,7 @@ html, body {
 
 @font-face {
     font-family: "SF Pro Bold";
+    font-weight: bold;
     src: url(../fonts/SF-Pro/SF-Pro-Bold.ttf);
 }
 
