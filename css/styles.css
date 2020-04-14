@@ -29,7 +29,7 @@ html, body {
 }
 
 @font-face {
-    font-family: "SF Pro Bold";
+    font-family: "SF Pro";
     font-weight: bold;
     src: url(../fonts/SF-Pro/SF-Pro-Bold.ttf);
 }
