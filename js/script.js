@@ -80,7 +80,7 @@ $(document).ready(function(){
     });
 
     $("#resume-card").click(function(){
-        window.open("https://drive.google.com/open?id=1YCWJgloRuL7wrw86dW4bGjPrUMweFcPM");
+        window.open("https://drive.google.com/file/d/1U3sMYHfYWYGTJP2o2dbgb7qzcrA11zp2/view?usp=sharing");
     });
     
 
@@ -208,7 +208,7 @@ $(document).ready(function(){
         });
 
         $("#resume-mobile").click(function(){
-            window.open("https://drive.google.com/open?id=1YCWJgloRuL7wrw86dW4bGjPrUMweFcPM");
+            window.open("https://drive.google.com/file/d/1U3sMYHfYWYGTJP2o2dbgb7qzcrA11zp2/view?usp=sharing");
         });
     }
     
